@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>العقيدة في القداسات الإلهية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">العقيدة في الليتورجية</div>
+      <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="mass.html" class="active">القداس</a>
+        <a href="tasbeha.html">التسبحة</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge">القداسات الإلهية</span>
+      <h1>العقائد داخل القداسات الثلاثة</h1>
+      <p>
+        اختر أولًا القداس، ثم اختر العقيدة، وسيظهر لك كل ما في هذا القداس
+        الذي يعبّر عن هذه العقيدة أو يشير إليها أو يشرحها.
+      </p>
+    </div>
+  </section>
+
+  <main class="container page-content">
+    <section class="section searchable">
+      <div class="section-head">
+        <h2>طريقة الاستخدام</h2>
+        <p>
+          هذه الصفحة مصممة بشكل تفاعلي: اختر القداس من الأعلى، ثم اضغط على العقيدة
+          التي تريد دراستها، وستظهر لك المواضع الليتورجية والشرح اللاهوتي والتطبيق العملي.
+        </p>
+      </div>
+
+      <div class="cards three">
+        <article class="card">
+          <h3>1) اختر القداس</h3>
+          <p>الباسيلي أو الغريغوري أو الكيرلسي.</p>
+        </article>
+        <article class="card">
+          <h3>2) اختر العقيدة</h3>
+          <p>التوحيد أو التثليث أو التجسد أو الفداء.</p>
+        </article>
+        <article class="card">
+          <h3>3) اقرأ التفاصيل</h3>
+          <p>ستجد المواضع والشرح والدلالة والجداول.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>اختر القداس</h2>
+      </div>
+
+      <div class="mass-tabs">
+        <button class="mass-tab-btn active" data-mass="basil">القداس الباسيلي</button>
+        <button class="mass-tab-btn" data-mass="gregory">القداس الغريغوري</button>
+        <button class="mass-tab-btn" data-mass="cyril">القداس الكيرلسي</button>
+      </div>
+
+      <!-- BASIL -->
+      <div class="mass-panel active" id="basil">
+        <div class="mass-intro">
+          <h2>القداس الباسيلي</h2>
+          <p>
+            يمتاز بالوضوح والتنظيم والتدرج التعليمي، ولذلك يعتبر مناسبًا جدًا لإظهار
+            العقيدة بصورة مرتبة ومتكاملة.
+          </p>
+        </div>
+
+        <div class="doctrine-tabs">
+          <button class="doctrine-tab-btn active" data-target="basil-unity">التوحيد</button>
+          <button class="doctrine-tab-btn" data-target="basil-trinity">التثليث</button>
+          <button class="doctrine-tab-btn" data-target="basil-incarnation">التجسد</button>
+          <button class="doctrine-tab-btn" data-target="basil-redemption">الفداء</button>
+        </div>
+
+        <div class="doctrine-content active" id="basil-unity">
+          <h3>التوحيد في القداس الباسيلي</h3>
+          <p>
+            يظهر الإيمان بالله الواحد في الباسيلي بشكل واضح من خلال لغة العبادة الموجهة
+            إلى الله ضابط الكل، ومن خلال قانون الإيمان الذي يبدأ بإعلان صريح عن الإيمان
+            بإله واحد. هذا يجعل الوحدانية قاعدة الصلاة كلها.
+          </p>
+
+          <div class="info-grid">
+            <div class="mini-card">
+              <h4>أين يظهر؟</h4>
+              <p>في قانون الإيمان، وصلاة الشكر، والصلوات الموجهة لله ضابط الكل.</p>
+            </div>
+            <div class="mini-card">
+              <h4>ما الدلالة؟</h4>
+              <p>أن كل العبادة في القداس موجهة إلى الإله الواحد الخالق والمدبر.</p>
+            </div>
+            <div class="mini-card">
+              <h4>الطابع العام</h4>
+              <p>وضوح تعليمي وترتيب عقائدي مباشر.</p>
+            </div>
+          </div>
+
+          <div class="quote-box">
+            <h4>فكرة رئيسية</h4>
+            <p>
+              التوحيد هنا ليس مجرد عبارة، بل هو أساس توجه الصلاة والطلب والتقديس والشكر.
+            </p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>الموضع</th>
+                  <th>علاقته بالتوحيد</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>قانون الإيمان</td>
+                  <td>إعلان صريح بالإيمان بإله واحد.</td>
+                </tr>
+                <tr>
+                  <td>صلاة الشكر</td>
+                  <td>توجيه الشكر لله الواحد ضابط الكل.</td>
+                </tr>
+                <tr>
+                  <td>الأنافورا</td>
+                  <td>إظهار الله الخالق والمدبر لكل شيء.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="doctrine-content" id="basil-trinity">
+  <h3>التثليث في القداس الباسيلي</h3>
+  <p>
+    التثليث في القداس الباسيلي لا يظهر فقط كفكرة عامة، بل من خلال عبارات محددة جدًا
+    في نصوص الصلاة نفسها. وفيما يلي العبارات الدالة على العقيدة داخل مواضع القداس المختلفة.
+  </p>
+
+  <div class="evidence-list">
+
+    <div class="evidence-card">
+      <span class="evidence-label">الموضع: قانون الإيمان</span>
+      <h4>الآب</h4>
+      <div class="evidence-quote">
+        نؤمن بإله واحد <span class="word-highlight">الله الآب ضابط الكل</span>
+      </div>
+      <p class="evidence-note">
+        هذه العبارة تدل على الأقنوم الأول: الآب، داخل إعلان الإيمان المسيحي.
+      </p>
+    </div>
+
+    <div class="evidence-card">
+      <span class="evidence-label">الموضع: قانون الإيمان</span>
+      <h4>الابن</h4>
+      <div class="evidence-quote">
+        نعم نؤمن <span class="word-highlight">برب واحد يسوع المسيح ابن الله الوحيد</span>
+      </div>
+      <p class="evidence-note">
+        هذه العبارة تعلن الأقنوم الثاني، الابن الوحيد، وتُظهر أن الحديث ليس عن نبي أو إنسان فقط
+        بل عن الابن الإلهي.
+      </p>
+    </div>
+
+    <div class="evidence-card">
+      <span class="evidence-label">الموضع: قانون الإيمان</span>
+      <h4>الروح القدس</h4>
+      <div class="evidence-quote">
+        نعم نؤمن <span class="word-highlight">بالروح القدس الرب المحيي</span>
+      </div>
+      <p class="evidence-note">
+        هذه العبارة تعلن الأقنوم الثالث: الروح القدس، وتؤكد ربوبيته وعمله المحيي.
+      </p>
+    </div>
+
+    <div class="evidence-card">
+      <span class="evidence-label">الموضع: استدعاء الروح القدس</span>
+      <h4>عمل الروح القدس في القداس</h4>
+      <div class="evidence-quote">
+        <span class="word-highlight">ليحل روحك القدوس علينا</span> وعلى هذه القرابين الموضوعة
+      </div>
+      <p class="evidence-note">
+        هنا يظهر حضور الروح القدس بوضوح داخل بنية القداس، لا في قانون الإيمان فقط،
+        بل أيضًا في الفعل الليتورجي نفسه.
+      </p>
+    </div>
+
+    <div class="evidence-card">
+      <span class="evidence-label">الموضع: البنية العامة للأنافورا</span>
+      <h4>العمل الثالوثي</h4>
+      <div class="evidence-quote">
+        الصلاة تُرفع إلى <span class="word-highlight">الآب</span>،
+        وتُعلن عمل <span class="word-highlight">الابن</span>،
+        ويُطلب حلول <span class="word-highlight">الروح القدس</span>
+      </div>
+      <p class="evidence-note">
+        حتى لو لم تكن العبارة هنا سطرًا واحدًا محفوظًا كما في قانون الإيمان،
+        فبنية الأنافورا نفسها تكشف العمل الثالوثي المتكامل.
+      </p>
+    </div>
+
+  </div>
+</div>
+          <h3>التثليث في القداس الباسيلي</h3>
+          <p>
+            الباسيلي من أوضح القداسات في عرض العمل الثالوثي، حيث تُرفع الصلاة إلى الآب،
+            بالابن، في الروح القدس. كما يظهر دور الروح القدس في استدعائه على القرابين،
+            ويظهر الابن في التدبير الخلاصي، والآب كمصدر العطية والخلاص.
+          </p>
+
+          <div class="info-grid">
+            <div class="mini-card">
+              <h4>أين يظهر؟</h4>
+              <p>في البركات، وفي بنية الأنافورا، وفي استدعاء الروح القدس.</p>
+            </div>
+            <div class="mini-card">
+              <h4>ما الدلالة؟</h4>
+              <p>أن الله الواحد معلن في الثالوث القدوس داخل الصلاة نفسها.</p>
+            </div>
+            <div class="mini-card">
+              <h4>الطابع العام</h4>
+              <p>تنظيم لاهوتي دقيق وواضح.</p>
+            </div>
+          </div>
+
+          <ul class="styled-list">
+            <li>الآب: تقام له الصلاة باعتباره مصدر الخلاص.</li>
+            <li>الابن: حاضر في التجسد والتدبير والفداء.</li>
+            <li>الروح القدس: حاضر في التقديس وتحويل القرابين.</li>
+          </ul>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>الموضع</th>
+                  <th>علاقته بالتثليث</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>الأنافورا</td>
+                  <td>تكشف العمل المترابط للآب والابن والروح القدس.</td>
+                </tr>
+                <tr>
+                  <td>استدعاء الروح القدس</td>
+                  <td>يظهر دور الروح القدس في سر التقديس.</td>
+                </tr>
+                <tr>
+                  <td>البركات والختمات</td>
+                  <td>تحمل صيغًا ثالوثية واضحة.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="doctrine-content" id="basil-incarnation">
+          <h3>التجسد في القداس الباسيلي</h3>
+          <p>
+            التجسد يظهر في قانون الإيمان وفي صلوات التدبير الإلهي، حيث يُعلن مجيء الابن
+            إلى العالم وأخذه جسدًا حقيقيًا من العذراء. كما يرتبط التجسد في هذا القداس
+            بسر الإفخارستيا لأن الذي يُقدَّم هو جسد الكلمة المتجسد.
+          </p>
+
+          <div class="info-grid">
+            <div class="mini-card">
+              <h4>أين يظهر؟</h4>
+              <p>في قانون الإيمان، والأنافورا، والاعتراف قبل التناول.</p>
+            </div>
+            <div class="mini-card">
+              <h4>ما الدلالة؟</h4>
+              <p>أن سر التجسد هو الأساس لفهم الجسد والدم في الإفخارستيا.</p>
+            </div>
+            <div class="mini-card">
+              <h4>الطابع العام</h4>
+              <p>شرح هادئ ومباشر يربط بين التجسد والخلاص.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="doctrine-content" id="basil-redemption">
+          <h3>الفداء في القداس الباسيلي</h3>
+          <p>
+            يظهر الفداء في هذا القداس من خلال ذكر الصليب والآلام والموت والقيامة والصعود،
+            ومن خلال القسمة والتناول. الباسيلي يعرض التدبير الخلاصي بشكل تعليمي واضح يجعل
+            المؤمن يفهم أن الذبيحة هي مركز الخلاص.
+          </p>
+
+          <div class="quote-box">
+            <h4>خلاصة</h4>
+            <p>الفداء في الباسيلي يظهر كتدبير إلهي مرتب ومعلن بوضوح في بنية القداس.</p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>الموضع</th>
+                  <th>علاقته بالفداء</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>الأنافورا</td>
+                  <td>تعرض تاريخ الخلاص من التجسد إلى الذبيحة.</td>
+                </tr>
+                <tr>
+                  <td>القسمة</td>
+                  <td>توضح معنى الذبيحة والخلاص.</td>
+                </tr>
+                <tr>
+                  <td>التناول</td>
+                  <td>شركة في الجسد والدم المبذولين لأجل العالم.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- GREGORY -->
+      <div class="mass-panel" id="gregory">
+        <div class="mass-intro">
+          <h2>القداس الغريغوري</h2>
+          <p>
+            يتميز بخطابه المباشر للمسيح، وبنبرته العاطفية والروحية، ولذلك يبرز فيه
+            التجسد والفداء بصورة قوية جدًا.
+          </p>
+        </div>
+
+        <div class="doctrine-tabs">
+          <button class="doctrine-tab-btn active" data-target="gregory-unity">التوحيد</button>
+          <button class="doctrine-tab-btn" data-target="gregory-trinity">التثليث</button>
+          <button class="doctrine-tab-btn" data-target="gregory-incarnation">التجسد</button>
+          <button class="doctrine-tab-btn" data-target="gregory-redemption">الفداء</button>
+        </div>
+
+        <div class="doctrine-content active" id="gregory-unity">
+          <h3>التوحيد في القداس الغريغوري</h3>
+          <p>
+            رغم أن الخطاب فيه موجَّه إلى الابن في كثير من المواضع، إلا أن الإيمان يبقى
+            قائمًا على وحدانية الله، لأن الابن واحد مع الآب والروح القدس في الجوهر.
+          </p>
+        </div>
+
+        <div class="doctrine-content" id="gregory-trinity">
+          <h3>التثليث في القداس الغريغوري</h3>
+          <p>
+            يظهر الثالوث في هذا القداس في الخلفية الكاملة للصلاة، حتى مع الخطاب المباشر
+            للمسيح. فالابن لا يُفهم منعزلًا عن الآب والروح القدس.
+          </p>
+
+          <ul class="styled-list">
+            <li>الابن يُخاطَب مباشرة بصفته الكلمة المتجسد.</li>
+            <li>هذا الخطاب لا يلغي حضور الآب والروح القدس.</li>
+            <li>الثالوث حاضر كوحدة إلهية في بنية الصلاة.</li>
+          </ul>
+        </div>
+
+        <div class="doctrine-content" id="gregory-incarnation">
+          <h3>التجسد في القداس الغريغوري</h3>
+          <p>
+            هذا هو أوضح موضع في الغريغوري. فيه تتأمل الكنيسة في محبة المسيح الذي نزل
+            من السماء وتجسد وأخذ شكل العبد، ولذلك يعتبر الغريغوري من أقوى النصوص
+            الليتورجية في شرح التجسد بلغة حب ودهشة.
+          </p>
+
+          <div class="info-grid">
+            <div class="mini-card">
+              <h4>أين يظهر؟</h4>
+              <p>في الخطاب المباشر للمسيح وفي صلوات التدبير الخلاصي.</p>
+            </div>
+            <div class="mini-card">
+              <h4>ما الدلالة؟</h4>
+              <p>أن التجسد هو تعبير المحبة الإلهية نحو الإنسان.</p>
+            </div>
+            <div class="mini-card">
+              <h4>الطابع العام</h4>
+              <p>وجداني وتأملي وعميق جدًا.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="doctrine-content" id="gregory-redemption">
+          <h3>الفداء في القداس الغريغوري</h3>
+          <p>
+            الفداء هنا ليس مجرد إعلان لاهوتي، بل يُقدَّم كفعل حب إلهي مباشر. لذلك يشعر
+            المصلي أن المسيح هو الذي بذل نفسه لأجله شخصيًا.
+          </p>
+
+          <div class="quote-box">
+            <h4>الفكرة الرئيسية</h4>
+            <p>الغريغوري يقدّم الفداء كلقاء محبة بين المسيح والكنيسة.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CYRIL -->
+      <div class="mass-panel" id="cyril">
+        <div class="mass-intro">
+          <h2>القداس الكيرلسي</h2>
+          <p>
+            يتميز بالعمق والقدم والتركيز على الذبيحة والتدبير الخلاصي في صياغة تقليدية
+            قوية جدًا.
+          </p>
+        </div>
+
+        <div class="doctrine-tabs">
+          <button class="doctrine-tab-btn active" data-target="cyril-unity">التوحيد</button>
+          <button class="doctrine-tab-btn" data-target="cyril-trinity">التثليث</button>
+          <button class="doctrine-tab-btn" data-target="cyril-incarnation">التجسد</button>
+          <button class="doctrine-tab-btn" data-target="cyril-redemption">الفداء</button>
+        </div>
+
+        <div class="doctrine-content active" id="cyril-unity">
+          <h3>التوحيد في القداس الكيرلسي</h3>
+          <p>
+            يظهر الإيمان بالله الواحد في الكيرلسي من خلال نبرة العبادة العميقة والسجود
+            لله الخالق ومدبر الكل، مع طابع تقليدي يحافظ على قوة الإعلان الإيماني.
+          </p>
+        </div>
+
+        <div class="doctrine-content" id="cyril-trinity">
+          <h3>التثليث في القداس الكيرلسي</h3>
+          <p>
+            يظهر الثالوث في الصيغ التمجيدية وفي ترابط العمل الإلهي داخل التدبير الخلاصي
+            والذبيحة المقدسة.
+          </p>
+        </div>
+
+        <div class="doctrine-content" id="cyril-incarnation">
+          <h3>التجسد في القداس الكيرلسي</h3>
+          <p>
+            يظهر التجسد هنا في إطار التدبير الخلاصي الواسع، أي أن الابن صار إنسانًا
+            لكي يتمم الخلاص. لذلك يأتي التجسد مرتبطًا دائمًا بهدف الفداء.
+          </p>
+        </div>
+
+        <div class="doctrine-content" id="cyril-redemption">
+          <h3>الفداء في القداس الكيرلسي</h3>
+          <p>
+            هذه واحدة من أبرز نقاط القوة في الكيرلسي، إذ يظهر الفداء من خلال نبرة الذبيحة
+            القوية جدًا، والتركيز على عمل المسيح الخلاصي الممتد عبر تاريخ التدبير.
+          </p>
+
+          <div class="info-grid">
+            <div class="mini-card">
+              <h4>أين يظهر؟</h4>
+              <p>في الأنافورا، والذبيحة، والقسمة، والصلوات ذات الطابع الخلاصي.</p>
+            </div>
+            <div class="mini-card">
+              <h4>ما الدلالة؟</h4>
+              <p>أن الذبيحة هي مركز إعلان الخلاص في هذا القداس.</p>
+            </div>
+            <div class="mini-card">
+              <h4>الطابع العام</h4>
+              <p>عميق، تاريخي، وذبائحي جدًا.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>الموضع</th>
+                  <th>علاقته بالفداء</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>الأنافورا</td>
+                  <td>تعرض التدبير الخلاصي بشكل تاريخي عميق.</td>
+                </tr>
+                <tr>
+                  <td>الذبيحة</td>
+                  <td>تركز على عمل المسيح الكفاري.</td>
+                </tr>
+                <tr>
+                  <td>القسمة</td>
+                  <td>تربط الذبيحة بشركة المؤمنين في الخلاص.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>ملاحظة مهمة</h2>
+      </div>
+      <div class="note-box">
+        العقيدة واحدة في كل القداسات، لكن طريقة إبرازها تختلف:
+        <br>الباسيلي: أوضح في الترتيب والتعليم
+        <br>الغريغوري: أقوى في التجسد والمحبة والخطاب المباشر للمسيح
+        <br>الكيرلسي: أعمق في الذبيحة والتدبير الخلاصي
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© موقع العقيدة في الليتورجية — صفحة القداسات التفاعلية</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
