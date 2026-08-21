@@ -3,181 +3,1036 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>العقيدة في التسبحة</title>
+
+  <title>التسبحة | العقيدة القبطية الأرثوذكسية</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: #f7f3ed;
+      color: #292323;
+      line-height: 2;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      background: linear-gradient(135deg, #4b174c, #76265f);
+      color: white;
+      padding: 55px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "✝";
+      position: absolute;
+      font-size: 180px;
+      opacity: 0.06;
+      left: 5%;
+      top: -35px;
+    }
+
+    header::after {
+      content: "✝";
+      position: absolute;
+      font-size: 180px;
+      opacity: 0.06;
+      right: 5%;
+      bottom: -70px;
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header-icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-family: "Amiri", serif;
+      font-size: clamp(32px, 5vw, 55px);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
+      opacity: 0.9;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    .tabs {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      padding: 12px;
+    }
+
+    .tabs-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      text-decoration: none;
+      color: #4b174c;
+      background: #f1e6ef;
+      padding: 9px 18px;
+      border-radius: 25px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .tab:hover {
+      background: #4b174c;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       MAIN
+    ========================== */
+
+    main {
+      width: min(1150px, 92%);
+      margin: 45px auto;
+    }
+
+    .intro {
+      background: white;
+      border-radius: 22px;
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      border-right: 5px solid #6d2462;
+    }
+
+    .intro h2 {
+      color: #4b174c;
+      margin-bottom: 10px;
+      font-family: "Amiri", serif;
+      font-size: 30px;
+    }
+
+    /* =========================
+       DOCTRINE SECTION
+    ========================== */
+
+    .doctrine {
+      margin-bottom: 60px;
+      scroll-margin-top: 90px;
+    }
+
+    .doctrine-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .doctrine-number {
+      width: 45px;
+      height: 45px;
+      background: #4b174c;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .doctrine-title h2 {
+      font-family: "Amiri", serif;
+      font-size: 32px;
+      color: #4b174c;
+    }
+
+    /* =========================
+       CONTENT CARD
+    ========================== */
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 7px 22px rgba(0,0,0,0.055);
+      border: 1px solid #eee5e9;
+    }
+
+    .card h3 {
+      color: #68245f;
+      font-size: 23px;
+      margin-bottom: 15px;
+      font-family: "Amiri", serif;
+    }
+
+    .card h4 {
+      color: #4b174c;
+      font-size: 19px;
+      margin: 20px 0 8px;
+    }
+
+    .card p {
+      margin-bottom: 12px;
+    }
+
+    .quote {
+      background: #faf5fa;
+      border-right: 4px solid #76265f;
+      padding: 17px 20px;
+      margin: 18px 0;
+      border-radius: 12px;
+      font-family: "Amiri", serif;
+      font-size: 20px;
+      color: #40283e;
+      line-height: 2.1;
+    }
+
+    .meaning {
+      background: #f7f7f7;
+      padding: 17px 20px;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
+    .meaning strong {
+      color: #68245f;
+    }
+
+    /* =========================
+       POINTS
+    ========================== */
+
+    ul {
+      padding-right: 25px;
+      margin: 12px 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       TRINITY BOX
+    ========================== */
+
+    .trinity-box {
+      background: linear-gradient(135deg, #4b174c, #76265f);
+      color: white;
+      padding: 30px;
+      border-radius: 20px;
+      margin: 25px 0;
+    }
+
+    .trinity-box h3 {
+      color: white;
+    }
+
+    .trinity-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .trinity-item {
+      background: rgba(255,255,255,0.12);
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .trinity-item strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #321132;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 60px;
+    }
+
+    footer h3 {
+      font-family: "Amiri", serif;
+      margin-bottom: 8px;
+      font-size: 25px;
+    }
+
+    footer p {
+      opacity: 0.8;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 40px 15px;
+      }
+
+      header h1 {
+        font-size: 34px;
+      }
+
+      header p {
+        font-size: 14px;
+      }
+
+      .tabs {
+        padding: 8px;
+      }
+
+      .tabs-container {
+        gap: 6px;
+      }
+
+      .tab {
+        padding: 7px 11px;
+        font-size: 13px;
+      }
+
+      main {
+        width: 94%;
+        margin: 30px auto;
+      }
+
+      .intro,
+      .card {
+        padding: 20px 17px;
+        border-radius: 16px;
+      }
+
+      .doctrine-title h2 {
+        font-size: 25px;
+      }
+
+      .card h3 {
+        font-size: 21px;
+      }
+
+      .quote {
+        font-size: 18px;
+        padding: 14px;
+      }
+
+      .trinity-items {
+        grid-template-columns: 1fr;
+      }
+
+      .trinity-box {
+        padding: 22px 17px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <div class="brand">العقيدة في الليتورجية</div>
-      <nav>
-        <a href="index.html">الرئيسية</a>
-        <a href="mass.html">القداس</a>
-        <a href="tasbeha.html" class="active">التسبحة</a>
-      </nav>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+    <div class="header-content">
+
+      <div class="header-icon">✝</div>
+
+      <h1>العقيدة في التسبحة</h1>
+
+      <p>
+        عقيدة التثليث والتوحيد • عقيدة الفداء • عقيدة التجسد
+      </p>
+
     </div>
   </header>
 
-  <section class="page-hero alt">
-    <div class="container">
-      <span class="badge">التسبحة الكنسية</span>
-      <h1>العقيدة في صلوات التسبحة</h1>
-      <p>
-        التسبحة القبطية تحمل كنوزًا عقائدية عظيمة، وتظهر فيها معاني الثالوث والتجسد
-        والفداء ووحدانية الله من خلال الألحان والذكصولوجيات والثيؤطوكيات.
-      </p>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <nav class="tabs">
+
+    <div class="tabs-container">
+
+      <a class="tab" href="#trinity">
+        التثليث والتوحيد
+      </a>
+
+      <a class="tab" href="#redemption">
+        الفداء
+      </a>
+
+      <a class="tab" href="#incarnation">
+        التجسد
+      </a>
+
     </div>
-  </section>
 
-  <main class="container page-content">
-    <section class="section searchable">
-      <div class="section-head">
-        <h2>مقدمة</h2>
+  </nav>
+
+
+  <main>
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <h2>التسبحة منظومة لاهوتية متكاملة</h2>
+
+      <p>
+        لا تقتصر التسبحة القبطية على التسبيح فقط، بل تحتوي على
+        كنز لاهوتي يعلن إيمان الكنيسة بسر الثالوث القدوس،
+        والتجسد الإلهي، وعمل المسيح الخلاصي والفداء.
+      </p>
+
+      <p>
+        وتظهر هذه العقائد من خلال الهوسات والإبصاليات
+        والثيؤطوكيات والألحان والصلوات.
+      </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         1. TRINITY
+    ====================================================== -->
+
+    <section class="doctrine" id="trinity">
+
+      <div class="doctrine-title">
+
+        <div class="doctrine-number">١</div>
+
+        <h2>عقيدة التثليث والتوحيد</h2>
+
+      </div>
+
+
+      <!-- INTRO TRINITY -->
+
+      <div class="card">
+
+        <h3>الثالوث القدوس والإله الواحد</h3>
+
         <p>
-          التسبحة ليست مجرد ترتيب لحني، بل هي لاهوت مُرتَّل. فيها تتكلم الكنيسة عن الله،
-          وعن التجسد، وعن الخلاص، وعن دور العذراء، وعن تمجيد الثالوث القدوس.
+          الإيمان المسيحي لا يؤمن بثلاثة آلهة، بل بإله واحد
+          في الجوهر، مثلث الأقانيم: الآب والابن والروح القدس.
         </p>
+
+        <div class="trinity-box">
+
+          <h3>الآب والابن والروح القدس</h3>
+
+          <div class="trinity-items">
+
+            <div class="trinity-item">
+              <strong>الآب</strong>
+              المصدر والآب للابن.
+            </div>
+
+            <div class="trinity-item">
+              <strong>الابن</strong>
+              كلمة الله، الابن الوحيد، ربنا وإلهنا ومخلصنا.
+            </div>
+
+            <div class="trinity-item">
+              <strong>الروح القدس</strong>
+              الروح المحيي، العامل في التقديس والشركة.
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+
+
+      <!-- HOS -->
+
+      <div class="card">
+
+        <h3>أولًا: الهوس الرابع وإبصالياته</h3>
+
+        <div class="quote">
+          «تعالوا نسجد للآب والابن والروح القدس»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة اللاهوتية:</strong>
+
+          <p>
+            دعوة صريحة ومباشرة للسجود والعبادة للثالوث
+            الأقدس المساوي في الإكرام.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- THEOTOKIA SUNDAY -->
+
+      <div class="card">
+
+        <h3>ثانيًا: ثيؤطوكيات الأيام السبعة</h3>
+
+        <h4>ثيؤطوكية الأحد</h4>
+
+        <div class="quote">
+          «يسوع المسيح إلهنا الحقيقي الذي أتى من أجل خلاصنا متجسدًا.»
+        </div>
+
+        <div class="quote">
+          «وتجسد من الروح القدس ومن مريم العروس الطاهرة.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة:</strong>
+
+          <p>
+            الابن هو المخلص المتجسد، والروح القدس ظاهر في
+            سر التجسد والحبل البتولي.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- MONDAY -->
+
+      <div class="card">
+
+        <h4>ثيؤطوكية الاثنين</h4>
+
+        <div class="quote">
+          «الله هو نور وساكن في النور... والنور أشرق من مريم.»
+        </div>
+
+        <div class="quote">
+          «الروح القدس أيقظ داود قائلًا: قم رتل لأن النور قد أشرق.»
+        </div>
+
+        <div class="quote">
+          «لأنه بإرادته ومسرة أبيه والروح القدس أتى وخلصنا.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة اللاهوتية:</strong>
+
+          <p>
+            الخلاص هو عمل ثالوثي:
+            إرادة ومسرة الآب، ومجيء وتجسد الابن،
+            وعمل الروح القدس.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- TUESDAY -->
+
+      <div class="card">
+
+        <h4>ثيؤطوكية الثلاثاء</h4>
+
+        <div class="quote">
+          «الكلمة الذي من الآب، أتى وتجسد من العذراء بغير زرع بشر حتى خلصنا.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة:</strong>
+
+          <p>
+            الابن هو الكلمة الذي من الآب، وقد أتى وتجسد
+            من العذراء من أجل خلاص العالم.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- WEDNESDAY -->
+
+      <div class="card">
+
+        <h4>ثيؤطوكية الأربعاء</h4>
+
+        <div class="quote">
+          «تطلع الآب من السماء فلم يجد من يشبهك، أرسل وحيده أتى وتجسد منك.»
+        </div>
+
+        <div class="quote">
+          «الآب صنعكِ، والروح القدس حل عليكِ، وقوة العلي ظللتكِ يا مريم... لأنك ولدتِ الكلمة الحقيقي ابن الآب الدائم إلى الأبد.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة:</strong>
+
+          <p>
+            الآب يرسل، والروح القدس يحل ويظلّل،
+            والابن هو الكلمة المتجسد.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- THURSDAY -->
+
+      <div class="card">
+
+        <h4>ثيؤطوكية الخميس</h4>
+
+        <div class="quote">
+          «لما ظهر ليوسف قائلًا هكذا إن الذي ستلده هو من الروح القدس... وكلمة الآب أتى وتجسد منها... وتلد ابنًا ويدعى اسمه عمانوئيل.»
+        </div>
+
+      </div>
+
+
+      <!-- FRIDAY -->
+
+      <div class="card">
+
+        <h4>ثيؤطوكية الجمعة</h4>
+
+        <div class="quote">
+          «لم يزل إلهًا، أتى وصار ابن بشر، لكنه هو الإله الحقيقي أتى وخلصنا.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة:</strong>
+
+          <p>
+            إعلان ألوهية الابن الكاملة وعدم تغير لاهوته
+            بسبب التجسد.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- SATURDAY -->
+
+      <div class="card">
+
+        <h4>ثيؤطوكية السبت</h4>
+
+        <div class="quote">
+          «الروح القدس حل عليكِ، وقوة العلي ظللتكِ يا مريم... لأنك ولدتِ الكلمة الحقيقي ابن الآب، الدائم إلى الأبد.»
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="section doctrine-block searchable">
-      <h2>التوحيد في التسبحة</h2>
-      <p>
-        يظهر التوحيد في كون كل التسبيح موجّهًا إلى الله الواحد، وفي فهم الكنيسة أن المجد
-        والعبادة والسجود يقدمون لله وحده. حتى عندما تكرم الكنيسة القديسين، يبقى التمجيد
-        الأصيل مرفوعًا لله.
-      </p>
-    </section>
 
-    <section class="section doctrine-block searchable">
-      <h2>التثليث في التسبحة</h2>
-      <p>
-        التثليث حاضر بوضوح في التمجيدات الثلاثية وصيغ البركة والتقديس. كثير من النصوص
-        الليتورجية تسبح الآب والابن والروح القدس معًا، وتكشف أن الثالوث ليس تعليمًا نظريًا
-        فقط، بل موضوع عبادة وتسبيح حي.
-      </p>
-      <div class="quote-box">
-        <h4>ملاحظة</h4>
+    <!-- =====================================================
+         2. REDEMPTION
+    ====================================================== -->
+
+    <section class="doctrine" id="redemption">
+
+      <div class="doctrine-title">
+
+        <div class="doctrine-number">٢</div>
+
+        <h2>عقيدة الفداء في التسبحة</h2>
+
+      </div>
+
+
+      <!-- HOS 1 -->
+
+      <div class="card">
+
+        <h3>أولًا: الهوسات</h3>
+
+        <h4>الهوس الأول — عبور البحر الأحمر</h4>
+
         <p>
-          التسبحة تحفظ الإيمان الثالوثي في ذاكرة الشعب من خلال التكرار اللحني.
+          عبور البحر الأحمر يرمز إلى المعمودية والانتقال
+          من العبودية إلى الحياة الجديدة.
         </p>
-      </div>
-    </section>
 
-    <section class="section doctrine-block searchable">
-      <h2>التجسد في التسبحة</h2>
-      <p>
-        هذا هو أوضح موضع عقائدي في التسبحة، خاصة في الثيؤطوكيات. ففيها تتأمل الكنيسة في سر
-        حلول الكلمة في أحشاء العذراء، وتستخدم رموز العهد القديم لتشرح هذا السر، مثل تابوت
-        العهد والمنارة وقسط المن والعليقة.
-      </p>
-      <div class="info-grid">
-        <div class="mini-card">
-          <h4>الثيؤطوكيات</h4>
-          <p>أكثر النصوص ارتباطًا بشرح التجسد.</p>
+        <p>
+          غرق فرعون وجيشه يرمز إلى هزيمة إبليس وقوات الشر.
+        </p>
+
+        <p>
+          عصا موسى ترمز إلى قوة صليب المسيح الذي به نلنا
+          النصرة والفداء.
+        </p>
+
+        <div class="quote">
+          «فلنسبح الرب لأنه بالمجد قد تمجد»
         </div>
-        <div class="mini-card">
-          <h4>رموز العهد القديم</h4>
-          <p>تستخدم لتوضيح سر التجسد بطريقة شعرية ولاهوتية.</p>
+
+      </div>
+
+
+      <!-- HOS 2 -->
+
+      <div class="card">
+
+        <h4>الهوس الثاني — الشكر على الخلاص</h4>
+
+        <p>
+          يتضمن تذكر أعمال الله الخلاصية وإخراج شعب إسرائيل
+          من وسط المذلة، كإشارة إلى الخلاص الأبدي بيسوع المسيح.
+        </p>
+
+        <p>
+          وتكرار:
+        </p>
+
+        <div class="quote">
+          «لأن إلى الأبد رحمته»
         </div>
-        <div class="mini-card">
-          <h4>تمجيد العذراء</h4>
-          <p>يرتبط بدورها في سر التجسد لا كغاية مستقلة.</p>
+
+        <p>
+          يؤكد ثبات رحمة الله وعمله الخلاصي عبر الأجيال.
+        </p>
+
+      </div>
+
+
+      <!-- HOS 3 -->
+
+      <div class="card">
+
+        <h4>الهوس الثالث — حضور الله وسط الألم</h4>
+
+        <p>
+          دخول المسيح إلى الأتون مع الفتية يعبّر عن حضور الله
+          الفادي وسط الألم وإنقاذ الإنسان من الهلاك.
+        </p>
+
+        <p>
+          وتحول النار إلى ندى يعلن غلبة النعمة على الموت.
+        </p>
+
+      </div>
+
+
+      <!-- ARIPSALIN -->
+
+      <div class="card">
+
+        <h4>ختام الهوس الثالث ولحن أريبصالين</h4>
+
+        <p>
+          يركز اللحن على الصلب والقبر والقيامة،
+          وعلى المسيح الذي صُلب عنا وقام وأبطل الموت.
+        </p>
+
+        <p>
+          كما يدعو الإنسان إلى خلع الإنسان العتيق ولبس
+          الإنسان الجديد.
+        </p>
+
+      </div>
+
+
+      <!-- PSALIES -->
+
+      <div class="card">
+
+        <h3>ثانيًا: الإبصاليات</h3>
+
+        <h4>إبصالية السبت</h4>
+
+        <div class="quote">
+          «مخلصي الصالح»
         </div>
+
+        <h4>إبصالية الخميس</h4>
+
+        <div class="quote">
+          «يا ربي يسوع المسيح الذي صُلب على الصليب اسحق الشيطان تحت أقدامنا.»
+        </div>
+
+        <div class="quote">
+          «يا ربي يسوع المسيح الذي وُضع في القبر اسحق عنا شوكة الموت.»
+        </div>
+
       </div>
+
+
+      <!-- THEOTOKIA -->
+
+      <div class="card">
+
+        <h3>ثالثًا: الثيؤطوكيات</h3>
+
+        <h4>ثيؤطوكية الاثنين</h4>
+
+        <div class="quote">
+          «حتى بذل ابنه الحبيب عن المؤمنين به لكي يحيوا إلى الأبد.»
+        </div>
+
+        <div class="quote">
+          «ويحل قضية الموت أنك يا آدم أنت تراب وإلى التراب تعود.»
+        </div>
+
+        <div class="quote">
+          «خلصت آدم من الغواية وأعتقت حواء من طلقات الموت.»
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="section doctrine-block searchable">
-      <h2>الفداء في التسبحة</h2>
-      <p>
-        يظهر الفداء في المدائح التي تتكلم عن الخلاص، وفي الألحان التي تمجد المسيح القائم،
-        وفي الربط بين مجيئه إلى العالم وبين خلاص الجنس البشري. فالتسبحة لا تقف عند الميلاد،
-        بل تربطه دائمًا بغاية الخلاص والانتصار.
-      </p>
-      <div class="note-box">
-        التسبحة تربط بين التجسد والفداء: فالذي وُلد من العذراء هو نفسه الذي خلّص العالم.
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="section-head">
-        <h2>جدول توضيحي</h2>
+    <!-- =====================================================
+         3. INCARNATION
+    ====================================================== -->
+
+    <section class="doctrine" id="incarnation">
+
+      <div class="doctrine-title">
+
+        <div class="doctrine-number">٣</div>
+
+        <h2>عقيدة التجسد في التسبحة</h2>
+
       </div>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>جزء من التسبحة</th>
-              <th>العقيدة</th>
-              <th>الدلالة</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>الثيؤطوكيات</td>
-              <td>التجسد</td>
-              <td>شرح سر تجسد الكلمة من العذراء.</td>
-            </tr>
-            <tr>
-              <td>الذكصولوجيات</td>
-              <td>التثليث + التوحيد</td>
-              <td>تمجيد الله بصيغ عقائدية واضحة.</td>
-            </tr>
-            <tr>
-              <td>الإبصاليات</td>
-              <td>التجسد + الفداء</td>
-              <td>تأملات شعرية في عمل المسيح الخلاصي.</td>
-            </tr>
-            <tr>
-              <td>الهوسات</td>
-              <td>التوحيد + الخلاص</td>
-              <td>تسبيح الله على أعماله الخلاصية.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="section-head">
-        <h2>أسئلة شائعة عن التسبحة</h2>
+      <!-- SUNDAY -->
+
+      <div class="card">
+
+        <h3>ثيؤطوكية الأحد</h3>
+
+        <div class="quote">
+          «واحد من اثنين، لاهوت قدوس بغير فساد، مساوٍ للآب، وناسوت طاهر بغير مباضعة، مساوٍ لنا كالتدبير.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة اللاهوتية:</strong>
+
+          <p>
+            الإعلان عن كمال لاهوت المسيح وكمال ناسوته،
+            واتحاد اللاهوت والناسوت في شخص المسيح.
+          </p>
+
+        </div>
+
+        <div class="quote">
+          «حبلت وولدت بغير زرع بشر ابن العلي الكلمة الذاتي.»
+        </div>
+
       </div>
 
-      <div class="faq">
-        <div class="faq-item">
-          <button class="faq-question">ما أكثر جزء يشرح التجسد في التسبحة؟</button>
-          <div class="faq-answer">
-            <p>الثيؤطوكيات هي الأوضح والأغنى في شرح سر التجسد.</p>
+
+      <!-- TUESDAY -->
+
+      <div class="card">
+
+        <h3>ثيؤطوكية الثلاثاء</h3>
+
+        <div class="quote">
+          «هو الكلمة الذي من الآب، أتى وتجسد من العذراء بغير زرع بشر حتى خلصنا.»
+        </div>
+
+        <div class="quote">
+          «غير المنظور غير المحدود ولدته مريم وهي عذراء.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة:</strong>
+
+          <p>
+            الكلمة موجود قبل التجسد، وقد أخذ جسدًا حقيقيًا
+            من العذراء.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- WEDNESDAY -->
+
+      <div class="card">
+
+        <h3>ثيؤطوكية الأربعاء</h3>
+
+        <div class="quote">
+          «أرسل وحيده، أتى وتجسد منك.»
+        </div>
+
+        <div class="quote">
+          «غير المتجسد تجسد، والكلمة تجسمت، وغير المبتدئ ابتدأ، وغير الزمني صار زمنيًا، وغير المدرك لمسوه، وغير المرئي رأوه.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة:</strong>
+
+          <ul>
+            <li>الكلمة أخذ جسدًا حقيقيًا.</li>
+            <li>الأزلي دخل الزمن بحسب الناسوت.</li>
+            <li>غير المرئي صار منظورًا بالجسد.</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- THURSDAY -->
+
+      <div class="card">
+
+        <h3>ثيؤطوكية الخميس</h3>
+
+        <div class="quote">
+          «لم يزل إلهًا، أتى وصار ابن بشر.»
+        </div>
+
+        <div class="meaning">
+
+          <strong>الدلالة:</strong>
+
+          <p>
+            المسيح هو إله كامل وإنسان كامل؛
+            لم يتغير لاهوته بالتجسد.
+          </p>
+
+        </div>
+
+        <div class="quote">
+          «وجبلت منه امرأة، كل عجينة البشرية أعطتها بالكمال لله الخالق وكلمة الآب.»
+        </div>
+
+      </div>
+
+
+      <!-- SUMMARY -->
+
+      <div class="card">
+
+        <h3>خلاصة عقيدة التجسد في التسبحة</h3>
+
+        <p>
+          تقدم التسبحة سر التجسد باعتباره سرًا إلهيًا:
+          الكلمة الأزلي، ابن الآب، أتى وتجسد من العذراء،
+          وصار إنسانًا حقيقيًا دون أن يفقد لاهوته.
+        </p>
+
+        <div class="trinity-box">
+
+          <h3>المسيح المتجسد</h3>
+
+          <div class="trinity-items">
+
+            <div class="trinity-item">
+              <strong>لاهوت كامل</strong>
+              مساوٍ للآب.
+            </div>
+
+            <div class="trinity-item">
+              <strong>ناسوت كامل</strong>
+              مساوٍ لنا كالتدبير.
+            </div>
+
+            <div class="trinity-item">
+              <strong>اتحاد حقيقي</strong>
+              اللاهوت والناسوت في شخص المسيح.
+            </div>
+
           </div>
+
         </div>
 
-        <div class="faq-item">
-          <button class="faq-question">هل التسبحة تشرح الفداء أيضًا؟</button>
-          <div class="faq-answer">
-            <p>نعم، خاصة في المدائح والصلوات التي تربط مجيء المسيح بالخلاص والقيامة.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">لماذا التسبحة مهمة في دراسة العقيدة؟</button>
-          <div class="faq-answer">
-            <p>لأنها تحفظ التعليم في صورة صلاة متكررة تدخل إلى وجدان المؤمنين.</p>
-          </div>
-        </div>
       </div>
+
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© موقع العقيدة في الليتورجية — صفحة التسبحة</p>
-    </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>العقيدة في التسبحة القبطية</h3>
+
+    <p>
+      الثالوث القدوس • الفداء • التجسد
+    </p>
+
+    <p>
+      «المجد للآب والابن والروح القدس»
+    </p>
+
   </footer>
 
-  <script src="script.js"></script>
+
 </body>
 </html>
