@@ -735,3 +735,223 @@ img {
     font-size: 23px;
   }
 }
+/* =========================================
+   عقيدة التجسد في القداس الباسيلي
+========================================= */
+
+.incarnation-section {
+    margin-top: 45px;
+    direction: rtl;
+}
+
+/* عنوان العقيدة */
+.incarnation-section .section-title {
+    text-align: right;
+    margin-bottom: 20px;
+    padding-right: 5px;
+}
+
+.incarnation-section .section-title h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #171717;
+    margin: 0 0 15px;
+    line-height: 1.5;
+}
+
+.incarnation-section .section-title p {
+    font-size: 17px;
+    color: #555;
+    margin: 0;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   الكارت الأبيض
+========================================= */
+
+.incarnation-section .doctrine-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e1ddd8;
+    border-top: 5px solid #74438b;
+
+    padding: 35px 45px;
+    margin: 0 auto 30px;
+
+    max-width: 1475px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    direction: rtl;
+    text-align: right;
+}
+
+
+/* عنوان كل جزء */
+
+.incarnation-section .doctrine-card h3 {
+    color: #4d2875;
+    font-size: 25px;
+    font-weight: 800;
+
+    margin: 0 0 25px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   النصوص المقتبسة
+========================================= */
+
+.incarnation-section .quote {
+    background: transparent;
+
+    border: none;
+    border-right: 0;
+
+    padding: 0;
+    margin: 15px 0 25px;
+
+    font-size: 19px;
+    line-height: 2.1;
+
+    color: #333;
+
+    font-weight: 500;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   الشرح والنقاط
+========================================= */
+
+.incarnation-section .doctrine-card ul {
+    margin: 0;
+    padding-right: 25px;
+
+    line-height: 2.1;
+
+    font-size: 17px;
+
+    color: #444;
+}
+
+.incarnation-section .doctrine-card li {
+    margin-bottom: 15px;
+    padding-right: 5px;
+}
+
+.incarnation-section .doctrine-card li::marker {
+    color: #74438b;
+}
+
+.incarnation-section .doctrine-card strong {
+    color: #4d2875;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   القسمة - الأجزاء الداخلية
+========================================= */
+
+.incarnation-section .sub-doctrine {
+    margin-top: 35px;
+    padding-top: 30px;
+
+    border-top: 1px solid #e5e1dc;
+}
+
+.incarnation-section .sub-doctrine:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.incarnation-section .sub-doctrine h4 {
+    color: #4d2875;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    margin: 0 0 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   الموبايل
+========================================= */
+
+@media (max-width: 900px) {
+
+    .incarnation-section .section-title h2 {
+        font-size: 27px;
+    }
+
+    .incarnation-section .doctrine-card {
+        padding: 28px 25px;
+        border-radius: 16px;
+    }
+
+    .incarnation-section .doctrine-card h3 {
+        font-size: 22px;
+    }
+
+    .incarnation-section .quote {
+        font-size: 17px;
+    }
+
+    .incarnation-section .doctrine-card ul {
+        font-size: 16px;
+    }
+
+    .incarnation-section .sub-doctrine h4 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .incarnation-section {
+        margin-top: 30px;
+    }
+
+    .incarnation-section .section-title h2 {
+        font-size: 23px;
+    }
+
+    .incarnation-section .section-title p {
+        font-size: 15px;
+    }
+
+    .incarnation-section .doctrine-card {
+        padding: 22px 18px;
+        border-top-width: 4px;
+    }
+
+    .incarnation-section .doctrine-card h3 {
+        font-size: 20px;
+    }
+
+    .incarnation-section .quote {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .incarnation-section .doctrine-card ul {
+        font-size: 15px;
+        line-height: 2;
+        padding-right: 20px;
+    }
+
+    .incarnation-section .sub-doctrine h4 {
+        font-size: 18px;
+    }
+}
